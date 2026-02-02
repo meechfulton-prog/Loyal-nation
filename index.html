@@ -1,202 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loyal Nation Clothing Group</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loyal Nation | Streetwear</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="top">
-    <div class="top-inner">
-      <div class="brand">
-        <div class="brand-badge">LN</div>
-        <div>
-          <h1>Loyal Nation</h1>
-          <p class="tagline">Clothing Group</p>
-        </div>
-      </div>
 
-      <div class="order">
-        <span class="order-label">Orders</span>
-        <a class="order-phone" href="tel:14434678955">443-467-8955</a>
-      </div>
-    </div>
+  <!-- Top Bar -->
+  <div class="topbar">
+    NEW DROP: LOYAL NATION YACHT CLUB • FREE SHIPPING $75+ • LIMITED QUANTITIES
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="brand">LOYAL NATION</div>
 
     <nav class="nav">
+      <a href="#new">New</a>
       <a href="#shop">Shop</a>
-      <a href="#collection">Collection</a>
+      <a href="#lookbook">Lookbook</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button class="btn small" id="openCartBtn">Cart (<span id="cartCount">0</span>)</button>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="kicker">LOYAL NATION • YACHT CLUB</p>
-      <h2>Luxury & Leisure</h2>
-      <p class="muted">
-        Premium streetwear inspired by high-class lifestyle. Limited drops + clean essentials.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn" href="#shop">Shop Now</a>
-        <a class="btn ghost" href="tel:14434678955">Call to Order</a>
-      </div>
-
-      <div class="hero-note">
-        📞 Order line: <a href="tel:14434678955">443-467-8955</a>
-      </div>
-    </div>
-
+  <section class="hero" id="new">
     <div class="hero-media">
-      <img src="images/yacht-shirt.jpg" alt="Loyal Nation Yacht Club shirt mockup">
+      <img src="images/yacht-shirt.jpg" alt="Loyal Nation Yacht Club Tee" />
+      <div class="hero-label">LIMITED DROP</div>
     </div>
+
+    <div class="hero-copy">
+      <h1>LOYAL NATION <span>YACHT CLUB</span></h1>
+      <p>Streetwear with luxury energy. Built on loyalty, crafted for presence.</p>
+
+      <div class="hero-buttons">
+        <a href="#shop" class="btn primary">Shop the Drop</a>
+        <a href="#lookbook" class="btn outline">View Lookbook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Strip -->
+  <section class="strip">
+    <div class="chip">Tees</div>
+    <div class="chip">Hoodies</div>
+    <div class="chip">Hats</div>
+    <div class="chip">Sets</div>
+    <div class="chip">Accessories</div>
   </section>
 
   <!-- Shop -->
   <section id="shop" class="section">
     <div class="section-head">
-      <h3>Featured Items</h3>
-      <p class="muted">Tap an item to view, then add to cart.</p>
+      <h2>SHOP THE DROP</h2>
+      <p>Best sellers and new arrivals.</p>
     </div>
 
-    <div class="grid" id="productGrid"></div>
-  </section>
+    <div class="grid">
+      <article class="card">
+        <div class="card-img">
+          <img src="images/yacht-shirt.jpg" alt="Yacht Club Tee" />
+          <span class="tag">NEW</span>
+        </div>
+        <h3>Yacht Club Tee</h3>
+        <p class="price">$45.00</p>
+        <button>Add to Cart</button>
+      </article>
 
-  <!-- Collection / Gallery -->
-  <section id="collection" class="section alt">
-    <div class="section-head">
-      <h3>Collection Gallery</h3>
-      <p class="muted">Detail shots + brand visuals.</p>
-    </div>
-
-    <div class="gallery">
-      <figure class="gallery-card">
-        <img src="images/yacht-closeup.jpg" alt="Yacht Club close-up design">
-        <figcaption>High-detail graphic finish</figcaption>
-      </figure>
-
-      <figure class="gallery-card">
-        <img src="images/handshake.jpg" alt="Loyal Nation handshake logo design">
-        <figcaption>Loyal Nation signature mark</figcaption>
-      </figure>
+      <article class="card">
+        <div class="card-img">
+          <img src="images/loyalty-handshake.jpg" alt="Loyalty Tee" />
+          <span class="tag">LIMITED</span>
+        </div>
+        <h3>Loyalty Tee</h3>
+        <p class="price">$42.00</p>
+        <button>Add to Cart</button>
+      </article>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section">
-    <div class="split">
-      <div class="about-card">
-        <h3>About Loyal Nation</h3>
-        <p class="muted">
-          Loyal Nation is built on trust, discipline, and identity. We don’t sell hype — we sell legacy.
-        </p>
-        <ul class="bullets">
-          <li>Premium fabric & print quality</li>
-          <li>Limited drops + core essentials</li>
-          <li>Fast direct ordering</li>
-        </ul>
-        <a class="btn ghost" href="tel:14434678955">Call: 443-467-8955</a>
-      </div>
-
-      <div class="logo-card">
-        <img src="images/handshake.jpg" alt="Loyal Nation logo">
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section alt">
-    <div class="section-head">
-      <h3>Place an Order</h3>
-      <p class="muted">Call or send a message and we’ll confirm size + availability.</p>
-    </div>
-
-    <div class="contact-box">
-      <div>
-        <div class="contact-line"><span>Phone:</span> <a href="tel:14434678955">443-467-8955</a></div>
-        <div class="contact-line"><span>Hours:</span> Mon–Sat • 10am–8pm</div>
-        <div class="contact-line"><span>Notes:</span> DM/Texts supported if you want to add it</div>
-      </div>
-      <button class="btn" onclick="callNow()">Call Now</button>
-    </div>
+  <section id="about" class="about">
+    <h2>About Loyal Nation</h2>
+    <p>
+      Loyal Nation is built on loyalty, discipline, and style.
+      Inspired by yacht culture and street aesthetics, this brand represents
+      power, unity, and timeless design.
+    </p>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>© <span id="year"></span> Loyal Nation Clothing Group</p>
-      <p>Orders: <a href="tel:14434678955">443-467-8955</a></p>
-    </div>
+  <footer>
+    <p>© 2026 Loyal Nation</p>
+    <p>Luxury • Loyalty • Legacy</p>
   </footer>
 
-  <!-- Product Modal -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-overlay" id="modalOverlay"></div>
-
-    <div class="modal-panel">
-      <button class="x" id="closeModalBtn" aria-label="Close">✕</button>
-
-      <div class="modal-body">
-        <div class="modal-img">
-          <img id="modalImg" src="" alt="">
-        </div>
-
-        <div class="modal-info">
-          <h3 id="modalTitle">Product</h3>
-          <p class="muted" id="modalDesc"></p>
-          <div class="modal-row">
-            <div class="price" id="modalPrice">$0.00</div>
-
-            <select id="sizeSelect">
-              <option value="S">S</option>
-              <option value="M" selected>M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-              <option value="XXL">XXL</option>
-            </select>
-          </div>
-
-          <div class="modal-row">
-            <label class="muted">Qty</label>
-            <input id="qtyInput" type="number" min="1" value="1" />
-          </div>
-
-          <button class="btn" id="addToCartBtn">Add to Cart</button>
-          <p class="muted tiny">Orders by phone: <a href="tel:14434678955">443-467-8955</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Drawer -->
-  <aside class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-overlay" id="drawerOverlay"></div>
-    <div class="drawer-panel">
-      <div class="drawer-head">
-        <h3>Your Cart</h3>
-        <button class="x" id="closeCartBtn" aria-label="Close">✕</button>
-      </div>
-
-      <div class="drawer-body" id="cartItems"></div>
-
-      <div class="drawer-foot">
-        <div class="totals">
-          <span class="muted">Subtotal</span>
-          <strong id="subtotal">$0.00</strong>
-        </div>
-
-        <a class="btn" href="tel:14434678955">Call to Order</a>
-        <button class="btn ghost" id="clearCartBtn">Clear Cart</button>
-      </div>
-    </div>
-  </aside>
-
-  <script src="script.js"></script>
 </body>
 </html>
