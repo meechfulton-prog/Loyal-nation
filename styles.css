@@ -2,172 +2,217 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georgia", serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #05070f; /* very dark blue/black */
-  color: #e6ecff; /* soft blue-white */
+  background: #04060d; /* deep black-blue */
+  color: #e6ecff;
 }
 
-/* NAV */
-.nav {
+/* Top bar */
+.topbar {
+  background: #1f4bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Header */
+.header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background: #000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #1a3cff; /* electric blue accent */
+  align-items: center;
+  padding: 20px 60px;
+  background: black;
+  border-bottom: 1px solid #1f4bff;
+}
+
+.brand {
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #1f4bff;
+  font-weight: bold;
 }
 
 .nav a {
   color: #cfd7ff;
-  margin-left: 25px;
   text-decoration: none;
+  margin-left: 25px;
   font-weight: 600;
 }
 
 .nav a:hover {
-  color: #1a3cff;
+  color: #1f4bff;
 }
 
-.logo {
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: #1a3cff;
-}
-
-/* HERO */
+/* Hero */
 .hero {
-  height: 90vh;
-  background: url("images/yacht-shirt.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.75);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 60px;
-  letter-spacing: 3px;
-  color: #1a3cff;
-}
-
-.hero p {
-  margin: 15px 0;
-  font-size: 18px;
-  color: #cfd7ff;
-}
-
-.btn {
-  padding: 14px 30px;
-  background: #1a3cff;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  background: #0f29c7;
-}
-
-/* PRODUCTS */
-.products {
-  padding: 80px 60px;
-  text-align: center;
-  background: #05070f;
-}
-
-.products h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #1a3cff;
-}
-
-.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 60px;
   gap: 40px;
 }
 
-.product {
-  background: #0b0f1f;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #111;
-  transition: transform 0.3s ease;
+.hero-media {
+  position: relative;
 }
 
-.product:hover {
-  transform: translateY(-5px);
-  border-color: #1a3cff;
-}
-
-.product img {
+.hero-media img {
   width: 100%;
-  border-radius: 6px;
-  border: 1px solid #1a3cff;
+  border-radius: 8px;
+  border: 2px solid #1f4bff;
 }
 
-.product h3 {
-  margin-top: 15px;
+.hero-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #1f4bff;
+  color: white;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero-copy h1 {
+  font-size: 60px;
+  color: #1f4bff;
+}
+
+.hero-copy span {
+  color: white;
+}
+
+.hero-copy p {
+  margin: 15px 0;
   color: #cfd7ff;
 }
 
-.product p {
-  margin: 10px 0;
-  color: #1a3cff;
-}
-
-.product button {
-  padding: 10px 20px;
-  border: none;
-  background: #1a3cff;
-  color: #fff;
-  cursor: pointer;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  text-decoration: none;
   font-weight: bold;
+  margin-right: 10px;
   border-radius: 4px;
 }
 
-.product button:hover {
-  background: #0f29c7;
+.primary {
+  background: #1f4bff;
+  color: white;
 }
 
-/* ABOUT */
+.outline {
+  border: 2px solid #1f4bff;
+  color: #1f4bff;
+}
+
+/* Category strip */
+.strip {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+  background: #05070f;
+}
+
+.chip {
+  border: 1px solid #1f4bff;
+  color: #1f4bff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* Shop grid */
+.section {
+  padding: 80px 60px;
+}
+
+.section-head h2 {
+  color: #1f4bff;
+  font-size: 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #0a0e1f;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #111;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #1f4bff;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #1f4bff;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #e6ecff;
+}
+
+.price {
+  color: #1f4bff;
+  margin: 10px 0;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: #1f4bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* About */
 .about {
-  background: #000;
-  padding: 80px;
+  background: black;
+  padding: 80px 60px;
   text-align: center;
-  border-top: 1px solid #1a3cff;
+  border-top: 1px solid #1f4bff;
 }
 
 .about h2 {
+  color: #1f4bff;
   margin-bottom: 20px;
-  color: #1a3cff;
 }
 
-.about p {
-  color: #cfd7ff;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
+  background: black;
   padding: 30px;
-  background: #000;
   text-align: center;
-  font-size: 14px;
+  border-top: 1px solid #1f4bff;
   color: #cfd7ff;
-  border-top: 1px solid #1a3cff;
 }
-}
+
