@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Loyal Nation Clothing Group</title>
   <meta name="description" content="Loyal Nation Clothing Group — streetwear drops. Order by phone: 443-467-8955" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top Bar -->
+  <!-- HEADER -->
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top">
-        <span class="logo"></span>
+      <a class="brand" href="#top" aria-label="Loyal Nation Home">
+        <span class="logo" aria-hidden="true"></span>
         <div class="brand-text">
           <h1>LOYAL NATION</h1>
           <p>Clothing Group</p>
         </div>
       </a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#drops">Drops</a>
         <a href="#lifestyle">Lifestyle</a>
         <a href="#contact">Contact</a>
@@ -33,16 +33,17 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <main id="top" class="hero">
     <div class="wrap hero-grid">
       <section class="hero-left">
-        <div class="kicker"><span class="dot"></span> NEW SEASON • BLACK & BLUE</div>
+        <div class="kicker"><span class="dot"></span> NEW SEASON • BLACK &amp; BLUE</div>
 
         <h2>Streetwear with<br/>Loyalty in the details.</h2>
+
         <p>
           Clean cuts. Bold graphics. Limited drops. Tap in and order directly.
-          <span class="muted">Fastest way to order:</span>
+          Fastest way to order:
           <a class="link" href="tel:4434678955">443-467-8955</a>
         </p>
 
@@ -59,9 +60,9 @@
         </div>
       </section>
 
-      <aside class="hero-right">
-        <!-- Uses YOUR repo image -->
-        <img src="images/loyal-nation.jpg" alt="Loyal Nation hero image" />
+      <aside class="hero-right" aria-label="Hero image">
+        <!-- MUST match your GitHub filename exactly -->
+        <img src="images/loyal-nation.jpg" alt="Loyal Nation hero" />
         <div class="hero-tag">
           <small>Direct Orders</small>
           <strong><a href="tel:4434678955">443-467-8955</a></strong>
@@ -70,7 +71,7 @@
     </div>
   </main>
 
-  <!-- Drops -->
+  <!-- DROPS -->
   <section id="drops" class="section">
     <div class="wrap section-head">
       <div>
@@ -81,6 +82,19 @@
     </div>
 
     <div class="wrap grid">
+      <!-- ADD THIS IMAGE FILE TO /images/ as: loyal-nation-tee.jpg -->
+      <article class="card">
+        <img src="images/loyal-nation-tee.jpg" alt="Loyal Nation Graphic Tee" />
+        <div class="card-body">
+          <h4>Loyal Nation Graphic Tee</h4>
+          <div class="row">
+            <span class="badge">NEW</span>
+            <span class="price">$—</span>
+          </div>
+          <button class="add" data-item="Loyal Nation Graphic Tee">Order This</button>
+        </div>
+      </article>
+
       <article class="card">
         <img src="images/yacht-shirt.jpg" alt="Yacht Shirt" />
         <div class="card-body">
@@ -105,22 +119,25 @@
         </div>
       </article>
 
+      <!-- Optional: if you want a 4th card, uncomment this.
+           NOTE: GitHub is case-sensitive. This uses the Capital-Y file you have. -->
+      <!--
       <article class="card">
-        <!-- Capital-Y version (different filename) -->
-        <img src="images/Yacht-shirt.jpg" alt="Yacht Shirt (Alt)" />
+        <img src="images/Yacht-shirt.jpg" alt="Yacht Shirt alternate photo" />
         <div class="card-body">
           <h4>Yacht Shirt (Alt)</h4>
           <div class="row">
-            <span class="badge">ALT PHOTO</span>
+            <span class="badge">ALT</span>
             <span class="price">$—</span>
           </div>
           <button class="add" data-item="Yacht Shirt (Alt)">Order This</button>
         </div>
       </article>
+      -->
     </div>
   </section>
 
-  <!-- Lifestyle -->
+  <!-- LIFESTYLE -->
   <section id="lifestyle" class="section">
     <div class="wrap lifestyle">
       <div class="panel copy">
@@ -137,7 +154,7 @@
           </div>
           <div class="mini-card">
             <small>Fast Order</small>
-            <strong>Text your size + item</strong>
+            <strong>Text item + size</strong>
           </div>
         </div>
 
@@ -145,12 +162,12 @@
       </div>
 
       <div class="panel image">
-        <img src="images/loyalty-handshake.jpg" alt="Loyalty handshake lifestyle" />
+        <img src="images/loyalty-handshake.jpg" alt="Loyalty handshake" />
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="wrap contact-grid">
       <div class="panel">
@@ -166,6 +183,7 @@
 
         <div class="actions">
           <a class="btn" href="tel:4434678955">Call Now</a>
+          <a class="btn ghost" href="sms:4434678955">Text</a>
           <button class="btn ghost" id="copyNumberBtn2" type="button">Copy Number</button>
         </div>
       </div>
@@ -173,27 +191,28 @@
       <form class="panel form" id="orderForm">
         <h3>Quick Order Message</h3>
 
-        <label>Item</label>
-        <input id="item" placeholder="Ex: Yacht Shirt" />
+        <label for="item">Item</label>
+        <input id="item" name="item" placeholder="Ex: Loyal Nation Graphic Tee" />
 
-        <label>Size</label>
-        <select id="size">
+        <label for="size">Size</label>
+        <select id="size" name="size">
           <option value="">Select size</option>
           <option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option>
         </select>
 
-        <label>Color</label>
-        <input id="color" placeholder="Ex: Black/Blue" />
+        <label for="color">Color</label>
+        <input id="color" name="color" placeholder="Ex: Black/Blue" />
 
-        <label>Notes</label>
-        <textarea id="notes" rows="4" placeholder="Ex: Deliver/meetup details"></textarea>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Ex: meetup/delivery details"></textarea>
 
         <button class="btn" type="submit">Generate Text Message</button>
-        <p class="muted tiny" id="msgOut"></p>
+        <p class="tiny" id="msgOut"></p>
       </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer-inner">
       <p>© <span id="year"></span> Loyal Nation Clothing Group</p>
