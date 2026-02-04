@@ -3,272 +3,204 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loyal Nation | Streetwear</title>
+  <title>Loyal Nation Clothing Group</title>
+  <meta name="description" content="Loyal Nation Clothing Group — streetwear drops. Order by phone: 443-467-8955" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">
+        <span class="logo"></span>
+        <div class="brand-text">
+          <h1>LOYAL NATION</h1>
+          <p>Clothing Group</p>
+        </div>
+      </a>
 
-  <!-- Top Bar / Marquee -->
-  <div class="topbar">
-    <div class="marquee">
-      <span>NEW DROP: LOYAL NATION YACHT CLUB • FREE SHIPPING $75+ • LIMITED QUANTITIES • ORDER DETAILS: (443) 467-8955 • </span>
-      <span>NEW DROP: LOYAL NATION YACHT CLUB • FREE SHIPPING $75+ • LIMITED QUANTITIES • ORDER DETAILS: (443) 467-8955 • </span>
-    </div>
-  </div>
+      <nav class="nav">
+        <a href="#drops">Drops</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="brand">
-      <span class="brand-mark">LN</span>
-      <span class="brand-name">LOYAL NATION</span>
-    </div>
-
-    <nav class="nav">
-      <a href="#new">New</a>
-      <a href="#shop">Shop</a>
-      <a href="#lookbook">Lookbook</a>
-      <a href="#about">About</a>
-    </nav>
-
-    <div class="header-cta">
-      <a class="pill" href="tel:14434678955">Call: (443) 467-8955</a>
+      <div class="cta">
+        <span class="pill">Order: <strong><a href="tel:4434678955">443-467-8955</a></strong></span>
+        <a class="btn" href="#contact">Place Order</a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="new">
-    <div class="hero-media">
-      <img src="images/yacht-shirt.jpg" alt="Loyal Nation Yacht Club Tee" />
-      <div class="hero-overlay">
-        <div class="hero-badge">LIMITED DROP</div>
-        <h1>LOYAL NATION<br><span>YACHT CLUB</span></h1>
-        <p>Luxury energy. Street discipline. Built for the ones who move different.</p>
+  <main id="top" class="hero">
+    <div class="wrap hero-grid">
+      <section class="hero-left">
+        <div class="kicker"><span class="dot"></span> NEW SEASON • BLACK & BLUE</div>
+
+        <h2>Streetwear with<br/>Loyalty in the details.</h2>
+        <p>
+          Clean cuts. Bold graphics. Limited drops. Tap in and order directly.
+          <span class="muted">Fastest way to order:</span>
+          <a class="link" href="tel:4434678955">443-467-8955</a>
+        </p>
+
         <div class="hero-actions">
-          <a class="btn primary" href="#shop">Shop Drop</a>
-          <a class="btn ghost" href="#lookbook">View Lookbook</a>
+          <a class="btn" href="tel:4434678955">Call to Order</a>
+          <button class="btn ghost" id="copyNumberBtn" type="button">Copy Number</button>
+          <a class="btn ghost" href="#drops">View Drops</a>
         </div>
-        <div class="hero-sub">
-          <span>⚡ Ships fast</span>
-          <span>🧵 Premium blanks</span>
-          <span>🔒 Limited quantities</span>
+
+        <div class="stats">
+          <div class="stat"><b>Limited</b><span>Drop-style releases</span></div>
+          <div class="stat"><b>Premium</b><span>Streetwear quality</span></div>
+          <div class="stat"><b>Direct</b><span>Order by phone</span></div>
         </div>
-      </div>
+      </section>
+
+      <aside class="hero-right">
+        <!-- Uses YOUR repo image -->
+        <img src="images/loyal-nation.jpg" alt="Loyal Nation hero image" />
+        <div class="hero-tag">
+          <small>Direct Orders</small>
+          <strong><a href="tel:4434678955">443-467-8955</a></strong>
+        </div>
+      </aside>
     </div>
-  </section>
+  </main>
 
-  <!-- Category Chips -->
-  <section class="chips">
-    <button class="chip" type="button">Tees</button>
-    <button class="chip" type="button">Hoodies</button>
-    <button class="chip" type="button">Hats</button>
-    <button class="chip" type="button">Sets</button>
-    <button class="chip" type="button">Accessories</button>
-  </section>
-
-  <!-- Featured Drop -->
-  <section class="featured">
-    <div class="section-head">
-      <h2>Featured Drop</h2>
-      <p>Handpicked pieces from the latest run.</p>
-    </div>
-
-    <div class="featured-grid">
-      <article class="featured-card">
-        <div class="fc-img">
-          <img src="images/loyalty-handshake.jpg" alt="Loyalty Tee" />
-          <span class="tag">LIMITED</span>
-        </div>
-        <div class="fc-body">
-          <h3>Loyalty Tee</h3>
-          <p class="muted">Clean front • statement back • everyday fit</p>
-          <div class="fc-row">
-            <span class="price">$42.00</span>
-            <button class="btn small" type="button">Add to Cart</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="featured-card">
-        <div class="fc-img">
-          <img src="images/yacht-shirt.jpg" alt="Yacht Club Tee" />
-          <span class="tag alt">NEW</span>
-        </div>
-        <div class="fc-body">
-          <h3>Yacht Club Tee</h3>
-          <p class="muted">Premium cotton • bold identity • limited run</p>
-          <div class="fc-row">
-            <span class="price">$45.00</span>
-            <button class="btn small" type="button">Add to Cart</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="featured-card">
-        <div class="fc-img">
-          <img src="images/loyalty-handshake.jpg" alt="Signature Graphic" />
-          <span class="tag">DROP</span>
-        </div>
-        <div class="fc-body">
-          <h3>Signature Graphic</h3>
-          <p class="muted">Street-ready • loud but clean • loyal by design</p>
-          <div class="fc-row">
-            <span class="price">$48.00</span>
-            <button class="btn small" type="button">Add to Cart</button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Shop Section -->
-  <section id="shop" class="products">
-    <div class="section-head">
-      <h2>Shop Collection</h2>
-      <p>Tap a piece. Orders are handled directly.</p>
-    </div>
-
-    <div class="product-grid">
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/loyalty-handshake.jpg" alt="Loyalty Tee" />
-          <span class="tag">LIMITED</span>
-        </div>
-        <h3>Loyalty Tee</h3>
-        <p class="price">$42.00</p>
-        <div class="card-actions">
-          <button type="button">Add to Cart</button>
-          <a class="btn-link" href="tel:14434678955">Order by phone</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/yacht-shirt.jpg" alt="Yacht Club Tee" />
-          <span class="tag alt">NEW</span>
-        </div>
-        <h3>Yacht Club Tee</h3>
-        <p class="price">$45.00</p>
-        <div class="card-actions">
-          <button type="button">Add to Cart</button>
-          <a class="btn-link" href="tel:14434678955">Order by phone</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/loyalty-handshake.jpg" alt="Loyal Nation Essential" />
-          <span class="tag">RESTOCK</span>
-        </div>
-        <h3>LN Essential</h3>
-        <p class="price">$39.00</p>
-        <div class="card-actions">
-          <button type="button">Add to Cart</button>
-          <a class="btn-link" href="tel:14434678955">Order by phone</a>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Order CTA -->
-    <div class="order-cta">
-      <h3>Want to order fast?</h3>
-      <p>Text/call for sizing, availability, and order details.</p>
-      <a class="btn primary" href="tel:14434678955">(443) 467-8955</a>
-    </div>
-  </section>
-
-  <!-- Lookbook -->
-  <section id="lookbook" class="lookbook">
-    <div class="section-head">
-      <h2>Lookbook</h2>
-      <p>Street luxury visuals. Add your best shots here.</p>
-    </div>
-
-    <div class="look-grid">
-      <div class="look-tile">
-        <img src="images/yacht-shirt.jpg" alt="Lookbook 1" />
-        <div class="look-cap">CITY / NIGHT</div>
-      </div>
-      <div class="look-tile">
-        <img src="images/loyalty-handshake.jpg" alt="Lookbook 2" />
-        <div class="look-cap">DROP DETAIL</div>
-      </div>
-      <div class="look-tile">
-        <img src="images/yacht-shirt.jpg" alt="Lookbook 3" />
-        <div class="look-cap">ON BODY</div>
-      </div>
-      <div class="look-tile">
-        <img src="images/loyalty-handshake.jpg" alt="Lookbook 4" />
-        <div class="look-cap">STREET CLEAN</div>
-      </div>
-    </div>
-
-    <div class="ig-banner">
+  <!-- Drops -->
+  <section id="drops" class="section">
+    <div class="wrap section-head">
       <div>
-        <h3>Join the Loyal Nation</h3>
-        <p class="muted">Post fits • tag us • get featured</p>
+        <h3>Drops</h3>
+        <p class="muted">Pick a piece — then call/text to order.</p>
       </div>
-      <a class="btn ghost" href="#shop">Shop Now</a>
+      <div class="chip">Black • Blue • Clean</div>
+    </div>
+
+    <div class="wrap grid">
+      <article class="card">
+        <img src="images/yacht-shirt.jpg" alt="Yacht Shirt" />
+        <div class="card-body">
+          <h4>Yacht Shirt</h4>
+          <div class="row">
+            <span class="badge">BEST SELLER</span>
+            <span class="price">$—</span>
+          </div>
+          <button class="add" data-item="Yacht Shirt">Order This</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/yacht-closeup.jpg" alt="Yacht Closeup" />
+        <div class="card-body">
+          <h4>Yacht Closeup</h4>
+          <div class="row">
+            <span class="badge">DETAIL SHOT</span>
+            <span class="price">$—</span>
+          </div>
+          <button class="add" data-item="Yacht Closeup">Order This</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <!-- Capital-Y version (different filename) -->
+        <img src="images/Yacht-shirt.jpg" alt="Yacht Shirt (Alt)" />
+        <div class="card-body">
+          <h4>Yacht Shirt (Alt)</h4>
+          <div class="row">
+            <span class="badge">ALT PHOTO</span>
+            <span class="price">$—</span>
+          </div>
+          <button class="add" data-item="Yacht Shirt (Alt)">Order This</button>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="section-head">
-      <h2>About Loyal Nation</h2>
-      <p>Discipline, loyalty, and legacy—made wearable.</p>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>Streetwear with Purpose</h3>
+  <!-- Lifestyle -->
+  <section id="lifestyle" class="section">
+    <div class="wrap lifestyle">
+      <div class="panel copy">
+        <h3>Lifestyle</h3>
         <p class="muted">
-          Loyal Nation is built on loyalty, discipline, and style. Inspired by yacht culture and street aesthetics,
-          the brand represents power, unity, and timeless design.
+          Loyalty isn’t a slogan — it’s a standard. Tap in for future drops, collabs,
+          and limited runs.
         </p>
+
+        <div class="contact-mini">
+          <div class="mini-card">
+            <small>Order Line</small>
+            <strong><a href="tel:4434678955">443-467-8955</a></strong>
+          </div>
+          <div class="mini-card">
+            <small>Fast Order</small>
+            <strong>Text your size + item</strong>
+          </div>
+        </div>
+
+        <a class="btn" href="#contact">Contact / Order</a>
       </div>
 
-      <div class="about-card">
-        <h3>Order Details</h3>
-        <p class="muted">
-          For sizing, availability, and order questions:
-        </p>
-        <a class="btn primary" href="tel:14434678955">(443) 467-8955</a>
-      </div>
-
-      <div class="about-card">
-        <h3>Limited Runs</h3>
-        <p class="muted">
-          When it’s gone, it’s gone. New drops are small-batch to keep it exclusive.
-        </p>
+      <div class="panel image">
+        <img src="images/loyalty-handshake.jpg" alt="Loyalty handshake lifestyle" />
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Loyal Nation</p>
-    <p>Luxury • Loyalty • Legacy</p>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="wrap contact-grid">
+      <div class="panel">
+        <h3>Contact / Orders</h3>
+        <p class="muted">
+          Call or text to order. Include: <b>item</b>, <b>size</b>, <b>color</b>, and <b>city</b>.
+        </p>
 
-    <p class="order-contact">
-      For order details:
-      <a href="tel:14434678955">(443) 467-8955</a>
-    </p>
+        <div class="big-number">
+          <span>Order Line</span>
+          <a href="tel:4434678955">443-467-8955</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="tel:4434678955">Call Now</a>
+          <button class="btn ghost" id="copyNumberBtn2" type="button">Copy Number</button>
+        </div>
+      </div>
+
+      <form class="panel form" id="orderForm">
+        <h3>Quick Order Message</h3>
+
+        <label>Item</label>
+        <input id="item" placeholder="Ex: Yacht Shirt" />
+
+        <label>Size</label>
+        <select id="size">
+          <option value="">Select size</option>
+          <option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option>
+        </select>
+
+        <label>Color</label>
+        <input id="color" placeholder="Ex: Black/Blue" />
+
+        <label>Notes</label>
+        <textarea id="notes" rows="4" placeholder="Ex: Deliver/meetup details"></textarea>
+
+        <button class="btn" type="submit">Generate Text Message</button>
+        <p class="muted tiny" id="msgOut"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Loyal Nation Clothing Group</p>
+      <p class="muted">Order: <a class="link" href="tel:4434678955">443-467-8955</a></p>
+    </div>
   </footer>
 
-  <!-- (Optional) Tiny JS for nicer buttons (doesn't break anything) -->
-  <script>
-    // Quick feedback when "Add to Cart" is clicked (since orders are manual)
-    document.querySelectorAll("button").forEach(btn => {
-      if (btn.textContent.toLowerCase().includes("add to cart")) {
-        btn.addEventListener("click", () => {
-          alert("Added! For checkout/order details call (443) 467-8955.");
-        });
-      }
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
