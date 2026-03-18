@@ -1,45 +1,44 @@
-const ORDER_NUMBER = "443-467-8955";
+const phoneNumber = "443-467-8955";
 
 function copyNumber() {
-  navigator.clipboard.writeText(ORDER_NUMBER)
-    .then(() => alert("Copied: " + ORDER_NUMBER))
-    .catch(() => alert("Copy failed — number is: " + ORDER_NUMBER));
+  navigator.clipboard.writeText(phoneNumber).then(() => {
+    alert("Phone number copied: " + phoneNumber);
+  });
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const copyBtn1 = document.getElementById("copyNumberBtn");
+const copyBtn2 = document.getElementById("copyNumberBtn2");
 
-document.getElementById("copyNumberBtn")?.addEventListener("click", copyNumber);
-document.getElementById("copyNumberBtn2")?.addEventListener("click", copyNumber);
+if (copyBtn1) copyBtn1.addEventListener("click", copyNumber);
+if (copyBtn2) copyBtn2.addEventListener("click", copyNumber);
 
-// Click "Order This" buttons -> auto-fill form + jump to contact
-document.querySelectorAll(".add").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const item = btn.getAttribute("data-item") || "";
-    const itemInput = document.getElementById("item");
-    if (itemInput) itemInput.value = item;
-    location.hash = "#contact";
+document.querySelectorAll(".add").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.dataset.item || "Loyal Nation item";
+    const smsMessage = `Hi, I want to order: ${item}`;
+    window.location.href = `sms:4434678955?body=${encodeURIComponent(smsMessage)}`;
   });
 });
 
-// Generate a ready-to-send text message
-document.getElementById("orderForm")?.addEventListener("submit", (e) => {
-  e.preventDefault();
+const orderForm = document.getElementById("orderForm");
+const msgOut = document.getElementById("msgOut");
 
-  const item = document.getElementById("item").value.trim();
-  const size = document.getElementById("size").value.trim();
-  const color = document.getElementById("color").value.trim();
-  const notes = document.getElementById("notes").value.trim();
+if (orderForm) {
+  orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const msg =
-    `LOYAL NATION ORDER%0A` +
-    `Item: ${item || "—"}%0A` +
-    `Size: ${size || "—"}%0A` +
-    `Color: ${color || "—"}%0A` +
-    `Notes: ${notes || "—"}`;
+    const item = document.getElementById("item").value.trim();
+    const size = document.getElementById("size").value.trim();
+    const color = document.getElementById("color").value.trim();
+    const notes = document.getElementById("notes").value.trim();
 
-  const out = document.getElementById("msgOut");
-  out.textContent = "Message generated — tap to open SMS.";
+    const message = `Hi, I want to order from Loyal Nation.%0AItem: ${item || "-"}%0ASize: ${size || "-"}%0AColor: ${color || "-"}%0ANotes: ${notes || "-"}`;
 
-  // Opens Messages app on iPhone/iPad
-  window.location.href = `sms:4434678955&body=${msg}`;
-});
+    msgOut.innerHTML = `<a href="sms:4434678955?body=${message}">Tap here to open your text message</a>`;
+  });
+}
+
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
